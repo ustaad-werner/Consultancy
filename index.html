@@ -1,0 +1,104 @@
+<!-- Main entry point -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components/navbar.css">
+    <title>Consultancy</title>
+ </head>
+ <body>
+    <!-- 
+    Make a navBar similiar to the one in the react file
+      -->
+    
+      <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-content">
+                <a href="#home" class="logo">
+                    In-House<span>.Consulting</span>
+                </a>
+                
+                <div class="hamburger" id="hamburger">
+                    &#9776;
+                </div>
+                
+                <!-- Desktop menu -->
+                <div class="desktop-menu">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </div>
+
+<div id = "sections-container">
+<section id="main-highlight" class =main-highlight-section>
+  <div class="text-center">
+            <h1 class="heading">Hi, This is In-House Consulting</h1>
+            <p class="description">
+                We work to provide the best services.
+            </p>
+            <div class="button-container">
+                <a href="#projects" class="btn-primary">View Projects</a>
+                <a href="#contact" class="btn-secondary">Contact Me</a>
+            </div>
+        </div>
+</section>
+<section id="services">...</section>
+<section id="projects">...</section>
+<section id="contact">...</section>
+</div>
+
+
+<script>
+        // Get elements
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let menuOpen = false;
+        
+        // Toggle menu function
+        function toggleMenu() {
+            menuOpen = !menuOpen;
+            
+            // Toggle mobile menu visibility
+            if (menuOpen) {
+                mobileMenu.classList.add('open');
+                document.body.style.overflow = "hidden"; // Prevent scrolling when menu is open
+            } else {
+                mobileMenu.classList.remove('open');
+                document.body.style.overflow = ""; // Allow scrolling when menu is closed
+            }
+        }
+        
+        // Add event listener to hamburger menu
+        hamburger.addEventListener('click', toggleMenu);
+        
+        // Close menu when clicking a mobile menu link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                toggleMenu();
+            });
+        });
+    // Load navbar into container
+    fetch('partials/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+      });
+  </script>
+
+ </body>
+ </html>

@@ -1,0 +1,105 @@
+   /* Navbar styles */
+   .nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 40;
+    /* background-color: #111827; bg-gray-900 */
+    background-color: #27374D;
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* border-white/10 */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+}
+
+.nav-container {
+    max-width: 64rem; /* max-w-5xl */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem; /* h-16 */
+}
+
+.logo {
+    font-family: monospace; /* font-mono */
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 700; /* font-bold */
+    color: white;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #3B82F6; /* text-blue-500 */
+}
+
+.hamburger {
+    width: 1.75rem; /* w-7 */
+    height: 1.25rem; /* h-5 */
+    position: relative;
+    cursor: pointer;
+    z-index: 40;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.desktop-menu {
+    display: none;
+}
+
+.nav-link {
+    color: #E5E7EB; /* text-gray-200 */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #06B6D4; /* text-cyan-500 */
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+     background-color: #111827;   /*bg-gray-900 */
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
+}
+
+.mobile-menu.open {
+    transform: translateY(0);
+}
+
+/* Media query for desktop menu */
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+    
+    .desktop-menu {
+        display: flex;
+        align-items: center;
+    }
+    
+    .desktop-menu a {
+        margin-left: 2rem; /* space-x-8 */
+    }
+    
+    .desktop-menu a:first-child {
+        margin-left: 0;
+    }
+}
