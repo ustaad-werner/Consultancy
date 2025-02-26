@@ -1,4 +1,4 @@
-<!-- RE-WRITE. -->
+RE-WRITE.
 
 <!-- 
 This is a basic rewrite of an already exsiting project 
