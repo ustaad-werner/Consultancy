@@ -1,5 +1,5 @@
 /* 
-this will have the statement "we work to the provide the
+This section would have the statement "we work to the provide the
 best services" Where the SERVICES text will blink
 and change its texts to the following:
 - Solutions
@@ -9,12 +9,14 @@ and change its texts to the following:
 
 
 /* Home Section */
-.home-section {
+#main-highlight {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    background-color : 
+    #DDE6ED;
 }
 
 /* Text Center */

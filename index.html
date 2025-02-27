@@ -6,12 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/components/navbar.css">
+    <link rel="stylesheet" href="css/Sections/main-highlight.css">
+    <link rel="stylesheet" href="css/Sections/services.css">
+    <script src = "components/navbar.js"></script>
+    <script src = "components/main-highlight.js"></script>
+    <script src = "components/services.js"></script>
     <title>Consultancy</title>
  </head>
  <body>
     <!-- 
     Make a navBar similiar to the one in the react file
-      -->
+    -->
     
       <nav class="nav">
         <div class="nav-container">
@@ -43,8 +48,10 @@
         <a href="#contact" class="nav-link">Contact</a>
     </div>
 
-<div id = "sections-container">
-<section id="main-highlight" class =main-highlight-section>
+
+<section
+ id="main-highlight"
+>
   <div class="text-center">
             <h1 class="heading">Hi, This is In-House Consulting</h1>
             <p class="description">
@@ -56,10 +63,78 @@
             </div>
         </div>
 </section>
-<section id="services">...</section>
+
+
+<!-- HTML for the Services Section -->
+<section id="services" class="services-section">
+    <div class="services-container">
+        <div class="services-header">
+            <h2>We Provide <span id="changing-text">Services</span> for Your Business</h2>
+            <p class="services-description">Comprehensive web development and technology solutions tailored to meet your business needs</p>
+        </div>
+        
+        <div class="services-grid">
+            <!-- Card 1 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                </div>
+                <h3>Web Development</h3>
+                <p>Custom responsive websites and web applications built with modern technologies to provide exceptional user experiences.</p>
+                <a href="#contact" class="learn-more">Learn More</a>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                        <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                        <path d="M2 2l7.586 7.586"></path>
+                        <circle cx="11" cy="11" r="2"></circle>
+                    </svg>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>User-centered design solutions that combine aesthetics with functionality to create engaging digital experiences.</p>
+                <a href="#contact" class="learn-more">Learn More</a>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                </div>
+                <h3>Full-Stack Solutions</h3>
+                <p>End-to-end development services covering both frontend and backend to create complete, scalable applications.</p>
+                <a href="#contact" class="learn-more">Learn More</a>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <h3>Maintenance & Support</h3>
+                <p>Ongoing technical support and maintenance services to ensure your digital products remain secure and up-to-date.</p>
+                <a href="#contact" class="learn-more">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="projects">...</section>
 <section id="contact">...</section>
-</div>
+
 
 
 <script>
