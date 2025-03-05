@@ -1,112 +1,341 @@
-/* Projects Section Styles */
-.projects-section {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+
+.slider {
+  &__item {
+    transform: scale(0.85);
+    /* put styles here */
   }
-  
-  .projects-container {
-    max-width: 64rem; /* max-w-5xl in Tailwind */
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  
-  .projects-heading {
-    font-size: 1.875rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    background: linear-gradient(to right, #3b82f6, #22d3ee);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-align: center;
-  }
-  
-  .projects-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  /* Project Cards */
-  .project-card {
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-0.25rem);
-    border-color: rgba(59, 130, 246, 0.3);
-    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
-  }
-  
-  .project-card.glass:hover {
-    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.1);
-  }
-  
-  .project-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-  }
-  
-  .project-description {
-    color: #9ca3af; /* text-gray-400 */
-    margin-bottom: 1rem;
-  }
-  
-  /* Tech Tags */
-  .tech-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .tech-tag {
-    background-color: rgba(59, 130, 246, 0.1);
-    color: #3b82f6;
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    font-size: 0.875rem;
-    transition: all 0.3s ease;
-  }
-  
-  .tech-tag:hover {
-    background-color: rgba(59, 130, 246, 0.2);
-    transform: translateY(-0.125rem);
-    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
-  }
-  
-  /* Project Links */
-  .project-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .project-link {
-    color: #60a5fa; /* text-blue-400 */
-    text-decoration: none;
-    transition: color 0.3s ease;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .project-link:hover {
-    color: #93c5fd; /* text-blue-300 */
-  }
-  
-  /* Media Queries for Responsive Layout */
-  @media (min-width: 768px) {
-    .projects-grid {
-      grid-template-columns: 1fr 1fr;
+}
+
+.slider {
+  &__item {
+    z-index: 2;
+    transform: scale(0.85);
+    &--1 {
+      #slide-1:checked ~ .slider__holder & { 
+        transform: scale(1);
+      }
+      
     }
   }
+  
+}
+  
+
+ 
+.slider {
+  
+  /* // .slider__item */
+  &__item {
+    transform: scale(0.85);
+    
+    /* // .slider__item--1 */
+    &--1 {
+      /* // #slide-1:checked ~ .slider__holder .slider__item--1 */
+      #slide-1:checked ~ .slider__holder & { 
+        transform: scale(1);
+      }
+    }
+    
+    /* // .slider__item--2 */
+    &--2 {
+      /* // #slide-2:checked ~ .slider__holder .slider__item--2 */
+      #slide-2:checked ~ .slider__holder & { 
+        transform: scale(1);
+      }
+    }
+    
+    /* // .slider__item--3 */
+    &--3 {
+      /* // #slide-3:checked ~ .slider__holder .slider__item--3 */
+      #slide-3:checked ~ .slider__holder & { 
+        transform: scale(1);
+      }
+    }
+    
+    /* // .slider__item--4 */
+    &--4 {
+      /* // #slide-4:checked ~ .slider__holder .slider__item--4 */
+      #slide-4:checked ~ .slider__holder & { 
+        transform: scale(1);
+      }
+    }
+    
+    /* // .slider__item--5 */
+    &--5 {
+      /* // #slide-5:checked ~ .slider__holder .slider__item--5 */
+      #slide-5:checked ~ .slider__holder & { 
+        transform: scale(1);
+      }
+    }
+  }
+  
+}
+
+
+.slider {
+  
+  /* // .slider__item */
+  &__item {
+    
+    &--1 {
+      /* // CARD 1 CONTENT  */
+    }
+    
+    /* // .slider__item--2 */
+    &--2 {
+      /* // #slide-1:checked ~ .slider__holder .slider__item--2 */
+      #slide-1:checked ~ .slider__holder & { 
+        z-index: 1;
+        
+        transform: scale(0.85) translateX(100px);
+      }
+    }
+    
+    &--3 {
+      /* // CARD 3 CONTENT  */
+    }
+    
+    &--4 {
+      /* // CARD 4 CONTENT  */
+    }
+    
+    &--5 {
+      /* // CARD 5 CONTENT  */
+    }
+  }
+  
+}
+
+
+.slider {
+  
+  /* // .slider__item */
+  &__item {
+    
+    &--1 {
+      // CARD 1 CONTENT 
+    }
+    
+    &--2 {
+      /* // CARD 2 CONTENT  */
+    }
+    
+    /* // .slider__item--3 */
+    &--3 {
+      /* // #slide-1:checked ~ .slider__holder .slider__item--3 */
+      #slide-1:checked ~ .slider__holder & { 
+        z-index: 0;
+        
+        transform: scale(0.65) translateX(210px);
+      }
+    }
+    
+    &--4 {
+      /* // CARD 4 CONTENT  */
+    }
+    
+    &--5 {
+      /* // CARD 5 CONTENT  */
+    }
+  }
+}
+
+.slider {
+  
+  /* // .slider__item */
+  &__item {
+    
+    &--1 {
+      /* // CARD 1 CONTENT  */
+    }
+    
+    &--2 {
+      /* // CARD 2 CONTENT  */
+    }
+    
+    /* // .slider__item--3 */
+    &--3 {
+      /* // #slide-1:checked ~ .slider__holder .slider__item--3 */
+      #slide-1:checked ~ .slider__holder & { 
+        z-index: 0;
+        
+        transform: scale(0.65) translateX(210px);
+      }
+    }
+    
+    &--4 {
+      /* // CARD 4 CONTENT  */
+    }
+    
+    &--5 {
+      /* // CARD 5 CONTENT  */
+    }
+  }
+}
+
+
+.slider {
+  &__item {
+    /* // Apply a default transition for smooth animations */
+    transition: all 0.3s ease;
+
+    /* // Loop through .slider__item--(slide-number) from 1 to 5 */
+    @for $slide from 1 through 5 {
+      &--#{$slide} {
+        /* // Within each .slider__item--(slide-number), loop through #slide-(number) from 1 to 5 */
+        @for $i from 1 through 5 {
+          /* // Slides 3 or more positions on the right */
+          @if $i <= $slide - 3 {
+            #slide-#{$i}:checked ~ .slider__holder & {
+              z-index: -1;
+              opacity: 0;
+              transform: translateX(210px) scale(0.65);
+            }
+          }
+
+          /* // Slide 2 positions on the right */
+          @if $i == $slide - 2 {
+            #slide-#{$i}:checked ~ .slider__holder & {
+              z-index: 0;
+              transform: translateX(210px) scale(0.65);
+            }
+          }
+
+          /* // Slide 1 position on the right */
+          @if $i == $slide - 1 {
+            #slide-#{$i}:checked ~ .slider__holder & {
+              z-index: 1;
+              transform: translateX(100px) scale(0.85);
+            }
+          }
+
+          /* // Active slide */
+          @if $i == $slide {
+            #slide-#{$i}:checked ~ .slider__holder & {
+              position: relative;
+              z-index: 2;
+              transform: translate(0) scale(1);
+            }
+          }
+
+          /* // Slide 1 position on the left */
+          @if $i == $slide + 1 {
+            #slide-#{$i}:checked ~ .slider__holder & {
+              z-index: 1;
+              transform: translateX(-100px) scale(0.85);
+            }
+          }
+
+          /* // Slide 2 positions on the left */
+          @if $i == $slide + 2 {
+            #slide-#{$i}:checked ~ .slider__holder & {
+              z-index: 0;
+              transform: translateX(-210px) scale(0.65);
+            }
+          }
+
+          /* // Slides 3 or more positions on the left */
+          @if $i >= $slide + 3 {
+            #slide-#{$i}:checked ~ .slider__holder & {
+              z-index: -1;
+              opacity: 0;
+              transform: translateX(-210px) scale(0.65);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------- */
+/* 
+.projects-section {
+  background: linear-gradient(145deg, #1a1a1a, #252525);
+  padding: 120px 24px;
+}
+
+.project-card {
+  position: absolute;
+  width: 100%;
+  background: rgba(30, 41, 59, 0.95);
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.slider__item--1 { transform: translateX(0) scale(1); z-index: 2; }
+.slider__item--2 { transform: translateX(100px) scale(0.85); z-index: 1; }
+.slider__item--3 { transform: translateX(210px) scale(0.65); z-index: 0; }
+.slider__item--4 { transform: translateX(210px) scale(0.65); opacity: 0; }
+
+
+.project-card:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 15px 30px rgba(59,130,246,0.3);
+  z-index: 10;
+}
+
+
+.tech-tag {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+
+
+.project-link {
+  color: #60a5fa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+  .slider__holder {
+    margin-top: 40px;
+  }
+  
+  .project-card {
+    padding: 1.5rem;
+  }
+  
+  .slider__item--2,
+  .slider__item--3,
+  .slider__item--4 {
+    opacity: 0;
+  }
+}
+
+
+.bullets__item {
+  background: rgba(255,255,255,0.2);
+  transition: all 0.3s ease;
+}
+
+.bullets__item:hover,
+#slide-1:checked ~ .bullets .bullets__item--1,
+#slide-2:checked ~ .bullets .bullets__item--2,
+#slide-3:checked ~ .bullets .bullets__item--3,
+#slide-4:checked ~ .bullets .bullets__item--4 {
+  background: #3b82f6;
+}
+
+
+.project-title {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-description {
+  color: #9ca3af;
+  margin-bottom: 1.5rem;
+} */
