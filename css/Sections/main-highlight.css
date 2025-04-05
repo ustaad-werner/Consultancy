@@ -10,7 +10,7 @@ and change its texts to the following:
 
 /* Home Section */
 #main-highlight {
-    min-height: 100vh;
+    min-height: 25vh;
     display: flex;
     align-items: center;
     justify-content: center;
