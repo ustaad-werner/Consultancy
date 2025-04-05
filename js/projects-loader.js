@@ -1,112 +1,131 @@
+// Optional: Auto-play functionality
+let currentSlide = 1;
+const totalSlides = 3; // Update this based on the number of slides
 
-//4th functionality 
-document.addEventListener('DOMContentLoaded', function() {
-  // 1. Card Hover Interactions
-  const cards = document.querySelectorAll('.project-card');
-  cards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-      card.style.zIndex = '10';
-    });
-    card.addEventListener('mouseleave', () => {
-      card.style.zIndex = '1';
-    });
-  });
+function nextSlide() {
+  // Uncheck the current slide
+  document.getElementById(`slide-${currentSlide}`).checked = false;
 
-  // 2. Slider Navigation Logic
-  const bullets = document.querySelectorAll('.bullets__item');
-  bullets.forEach((bullet, index) => {
-    bullet.addEventListener('click', () => {
-      // Update slider position based on bullet index
-      const sliderHolder = document.querySelector('.slider__holder');
-      sliderHolder.style.transform = `translateX(-${index * 100}%)`;
-    });
-  });
+  // Move to the next slide
+  currentSlide = currentSlide % totalSlides + 1;
 
-  // 3. Auto-Advance (Optional)
-  let currentSlide = 0;
-  setInterval(() => {
-    currentSlide = (currentSlide + 1) % 4;
-    document.getElementById(`slide-${currentSlide + 1}`).checked = true;
-  }, 5000); // Change slide every 5 seconds
-});
-
-class ProjectSlider {
-  constructor() {
-    this.slider = document.querySelector('.slider');
-    this.slides = document.querySelectorAll('.slider__item');
-    this.bullets = document.querySelectorAll('.bullets__item');
-    this.currentIndex = 0;
-    
-    this.init();
-  }
-
-  init() {
-    // Initialize event listeners
-    this.bullets.forEach((bullet, index) => {
-      bullet.addEventListener('click', () => this.goToSlide(index));
-    });
-
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') this.prevSlide();
-      if (e.key === 'ArrowRight') this.nextSlide();
-    });
-
-    // Hover effects
-    this.slides.forEach(slide => {
-      slide.addEventListener('mouseenter', this.handleHover);
-      slide.addEventListener('mouseleave', this.resetHover);
-    });
-
-    // Auto-advance
-    this.startAutoAdvance();
-  }
-
-  handleHover(e) {
-    e.target.style.transform = 'scale(1.05) translateY(-10px)';
-    e.target.style.zIndex = '10';
-  }
-
-  resetHover(e) {
-    e.target.style.transform = '';
-    e.target.style.zIndex = '1';
-  }
-
-  goToSlide(index) {
-    this.currentIndex = index;
-    this.updateSlider();
-    this.updateBullets();
-  }
-
-  updateSlider() {
-    this.slides.forEach((slide, i) => {
-      slide.style.transform = this.calculateTransform(i);
-      slide.style.opacity = i === this.currentIndex ? '1' : '0.5';
-    });
-  }
-
-  calculateTransform(index) {
-    const offset = index - this.currentIndex;
-    return `translateX(${offset * 100}%) scale(${1 - Math.abs(offset) * 0.15})`;
-  }
-
-  updateBullets() {
-    this.bullets.forEach(bullet => 
-      bullet.classList.remove('active'));
-    this.bullets[this.currentIndex].classList.add('active');
-  }
-
-  startAutoAdvance() {
-    setInterval(() => {
-      this.currentIndex = (this.currentIndex + 1) % this.slides.length;
-      this.updateSlider();
-      this.updateBullets();
-    }, 8000);
-  }
+  // Check the next slide
+  document.getElementById(`slide-${currentSlide}`).checked = true;
 }
 
-// Initialize slider
-new ProjectSlider();
+// Auto-play every 3 seconds
+setInterval(nextSlide, 3000);
+
+
+
+// //4th functionality 
+// document.addEventListener('DOMContentLoaded', function() {
+//   // 1. Card Hover Interactions
+//   const cards = document.querySelectorAll('.project-card');
+//   cards.forEach(card => {
+//     card.addEventListener('mouseenter', () => {
+//       card.style.zIndex = '10';
+//     });
+//     card.addEventListener('mouseleave', () => {
+//       card.style.zIndex = '1';
+//     });
+//   });
+
+//   // 2. Slider Navigation Logic
+//   const bullets = document.querySelectorAll('.bullets__item');
+//   bullets.forEach((bullet, index) => {
+//     bullet.addEventListener('click', () => {
+//       // Update slider position based on bullet index
+//       const sliderHolder = document.querySelector('.slider__holder');
+//       sliderHolder.style.transform = `translateX(-${index * 100}%)`;
+//     });
+//   });
+
+//   // 3. Auto-Advance (Optional)
+//   let currentSlide = 0;
+//   setInterval(() => {
+//     currentSlide = (currentSlide + 1) % 4;
+//     document.getElementById(`slide-${currentSlide + 1}`).checked = true;
+//   }, 5000); // Change slide every 5 seconds
+// });
+
+// class ProjectSlider {
+//   constructor() {
+//     this.slider = document.querySelector('.slider');
+//     this.slides = document.querySelectorAll('.slider__item');
+//     this.bullets = document.querySelectorAll('.bullets__item');
+//     this.currentIndex = 0;
+    
+//     this.init();
+//   }
+
+//   init() {
+//     // Initialize event listeners
+//     this.bullets.forEach((bullet, index) => {
+//       bullet.addEventListener('click', () => this.goToSlide(index));
+//     });
+
+//     // Keyboard navigation
+//     document.addEventListener('keydown', (e) => {
+//       if (e.key === 'ArrowLeft') this.prevSlide();
+//       if (e.key === 'ArrowRight') this.nextSlide();
+//     });
+
+//     // Hover effects
+//     this.slides.forEach(slide => {
+//       slide.addEventListener('mouseenter', this.handleHover);
+//       slide.addEventListener('mouseleave', this.resetHover);
+//     });
+
+//     // Auto-advance
+//     this.startAutoAdvance();
+//   }
+
+//   handleHover(e) {
+//     e.target.style.transform = 'scale(1.05) translateY(-10px)';
+//     e.target.style.zIndex = '10';
+//   }
+
+//   resetHover(e) {
+//     e.target.style.transform = '';
+//     e.target.style.zIndex = '1';
+//   }
+
+//   goToSlide(index) {
+//     this.currentIndex = index;
+//     this.updateSlider();
+//     this.updateBullets();
+//   }
+
+//   updateSlider() {
+//     this.slides.forEach((slide, i) => {
+//       slide.style.transform = this.calculateTransform(i);
+//       slide.style.opacity = i === this.currentIndex ? '1' : '0.5';
+//     });
+//   }
+
+//   calculateTransform(index) {
+//     const offset = index - this.currentIndex;
+//     return `translateX(${offset * 100}%) scale(${1 - Math.abs(offset) * 0.15})`;
+//   }
+
+//   updateBullets() {
+//     this.bullets.forEach(bullet => 
+//       bullet.classList.remove('active'));
+//     this.bullets[this.currentIndex].classList.add('active');
+//   }
+
+//   startAutoAdvance() {
+//     setInterval(() => {
+//       this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+//       this.updateSlider();
+//       this.updateBullets();
+//     }, 8000);
+//   }
+// }
+
+// // Initialize slider
+// new ProjectSlider();
 
 
 /* --------------------------------------------------- */

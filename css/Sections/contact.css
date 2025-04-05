@@ -5,6 +5,11 @@
     align-items: center;
     justify-content: center;
     padding: 5rem 0;
+    background-color : 
+    #DDE6ED;
+    margin-top: 4rem;
+    position : relative;
+    z-index: 1;
 }
 
 .contact-container {

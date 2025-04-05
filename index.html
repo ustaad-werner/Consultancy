@@ -11,12 +11,15 @@
     <link rel="stylesheet" href="css/Sections/projects.css">
     <link rel="stylesheet" href="css/Sections/revealOnScroll.css">
     <link rel="stylesheet" href="css/Sections/contact.css"> 
+    <link rel="stylesheet" href="css/Sections/carousel-container.css">
+    
     <script src = "js/navbar.js"></script>
     <script src = "js/main-highlight.js"></script>
     <script src = "js/services.js"></script>
     <script src = "js/projects-loader.js"></script>
     <script src = "js/revealOnScroll.js"></script>
     <script src = "js/contact.js"></script> 
+    <script src = "js/carousel.js"></script>
     <title>Consultancy</title>
  </head>
  <body>
@@ -45,7 +48,7 @@
             </div>
         </div>
     </nav>
-    
+    <div class="container">
     <!-- Mobile menu -->
     <div class="mobile-menu" id="mobile-menu">
         <a href="#home" class="nav-link">Home</a>
@@ -73,7 +76,7 @@
 
 <!-- HTML for the Services Section -->
 <div class = "reveal">
-<section id="services" class="services-section">
+<div id="services" class="services-section">
     <div class="services-container">
         <div class="services-header">
             <h2>We Provide <span id="changing-text">Services</span> for Your Business</h2>
@@ -137,145 +140,44 @@
             </div>
         </div>
     </div>
-</section>
+  </div>  
 </div>
-<!-- -------------------------- -->
-
-<!-- <div class="reveal">
-  <section id="projects" class="projects-section">
-    <div class="projects-container">
-      <div class="section__entry section__entry--center">
-        <h2 class="projects-heading section__title">Featured Projects</h2>
-      </div>  
-      
-      <div class="slider">
-        <input type="radio" name="slider" id="slide-1" class="slider__radio" checked>
-        <input type="radio" name="slider" id="slide-2" class="slider__radio">
-        <input type="radio" name="slider" id="slide-3" class="slider__radio">
-        <input type="radio" name="slider" id="slide-4" class="slider__radio">
-        
-      
-         
-          <div class="slider__item project-card slider__item--1">
-            <div class="slider__item-content">
-              <h3 class="project-title">Cloud Platform</h3>
-              <p class="project-description">
-                Scalable cloud infrastructure management with real-time
-                monitoring and automated scaling.
-              </p>
-              <div class="tech-tags">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">AWS</span>
-                <span class="tech-tag">Docker</span>
-              </div>
-              <div class="project-links">
-                <a href="#" class="project-link button">View Project →</a>
-              </div>
-            </div>
-          </div> -->
-   
-          
-        
-  
-      
-        <!-- <div class="bullets">
-          <label for="slide-1" class="bullets__item--1">
-            First slide
-          </label>
-          <label for="slide-2" class="bullets__item--2"></label>
-          <label for="slide-3" class="bullets__item--3"></label>
-          <label for="slide-4" class="bullets__item--4"></label>
-        </div>
-      </div>
+<!--------------------- Slider section-------------------------- -->
+<div class="carousel-container">
+    <div class="card">
+      <h2>Development</h2>
+      <h3>SCSS Only slider</h3>
+      <p>This tutorial will teach you how to create a SCSS only responsive slider. Feel free to read the whole tutorial or just download and try it by yourself.</p>
+      <a href="#">Read on Medium</a>
     </div>
-  </section>
-  </div>  -->
-  <!-- ----------------------------------- -->
+    <div class="card">
+      <h2>Development</h2>
+      <h3>SCSS Only slider</h3>
+      <p>This tutorial will teach you how to create a SCSS only responsive slider. Feel free to read the whole tutorial or just download and try it by yourself.</p>
+      <a href="#">Read on Medium</a>
+    </div>
+    <div class="card">
+      <h2>Development</h2>
+      <h3>SCSS Only slider</h3>
+      <p>This tutorial will teach you how to create a SCSS only responsive slider. Feel free to read the whole tutorial or just download and try it by yourself.</p>
+      <a href="#">Read on Medium</a>
+    </div>
+    <div class="card">
+      <h2>Development</h2>
+      <h3>SCSS Only slider</h3>
+      <p>This tutorial will teach you how to create a SCSS only responsive slider. Feel free to read the whole tutorial or just download and try it by yourself.</p>
+      <a href="#">Read on Medium</a>
+    </div>
+    <div class="card">
+      <h2>Development</h2>
+      <h3>SCSS Only slider</h3>
+      <p>This tutorial will teach you how to create a SCSS only responsive slider. Feel free to read the whole tutorial or just download and try it by yourself.</p>
+      <a href="#">Read on Medium</a>
+    </div>
+  </div>
+<!-- -------------------------------- -->
 
- <div class="reveal">
-<section id="projects" class="projects-section">
-      <div class="projects-container">
-        <h2 class="projects-heading">Featured Projects</h2>
-        <div class="projects-grid">
-        
-          <div class="project-card">
-            <h3 class="project-title">Cloud Platform</h3>
-            <p class="project-description">
-              Scalable cloud infrastructure management with real-time
-              monitoring and automated scaling.
-            </p>
-            <div class="tech-tags">
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">AWS</span>
-              <span class="tech-tag">Docker</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link">View Project →</a>
-            </div>
-          </div>
-  
-
-          <div class="project-card glass">
-            <h3 class="project-title">AI Analytics Dashboard</h3>
-            <p class="project-description">
-              ML-powered data visualization platform with predictive analytics
-              and interactive reports.
-            </p>
-            <div class="tech-tags">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">TensorFlow</span>
-              <span class="tech-tag">D3.js</span>
-              <span class="tech-tag">Flask</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link">View Project →</a>
-            </div>
-          </div>
-  
-     
-          <div class="project-card glass">
-            <h3 class="project-title">E-Commerce Web App</h3>
-            <p class="project-description">
-              Full-stack e-commerce with modern UI, secure payment
-              integration, and customizable product inventory.
-            </p>
-            <div class="tech-tags">
-              <span class="tech-tag">Next.js</span>
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">Stripe</span>
-              <span class="tech-tag">PostgreSQL</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link">View Project →</a>
-            </div>
-          </div>
-  
-   
-          <div class="project-card glass">
-            <h3 class="project-title">Real-Time Chat App</h3>
-            <p class="project-description">
-              Scalable chat platform supporting real-time messaging, presence,
-              and group chat features.
-            </p>
-            <div class="tech-tags">
-              <span class="tech-tag">Socket.IO</span>
-              <span class="tech-tag">Express</span>
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">Redis</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link">View Project →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-</div>  -->
-
-<div class="reveal">
-<section id="contact" class ="contact-section">
+<div id="contact" class ="contact-section">
   <div class="contact-container">
     <h2 class="contact-heading">Get In Touch</h2>
     <form id="contactForm" class="contact-form">
@@ -293,13 +195,19 @@
         </div>
         <button type="submit" class="submit-btn">Send Message</button>
     </form>
+    </div>
 </div>
-
-
-</section>
 </div>
-
-
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2023 In-House Consulting. All rights reserved.</p>
+            <div class="social-icons"
+                <a href="https://www.linkedin.com" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://www.github.com" target="_blank"><img src="images/github.png" alt="GitHub"></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+            </div>
+        </div>      
+    </footer>
 <script>
         // Get elements
         const hamburger = document.getElementById('hamburger');
@@ -307,7 +215,7 @@
         let menuOpen = false;
         
         // Toggle menu function
-        function toggleMenu() {
+        function toggleMenu() { 
             menuOpen = !menuOpen;
             
             // Toggle mobile menu visibility
